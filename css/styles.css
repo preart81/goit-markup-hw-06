@@ -821,7 +821,7 @@ ul {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 408px;
+  width: 392px;
   /* height: 584px; */
   padding: 72px 24px 24px 24px;
   background-color: var(--dairy);
@@ -829,24 +829,11 @@ ul {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
-/* .modal input[type="checkbox"] {
-  -webkit-appearance: none;
-  appearance: none;
-  background-color: transparent;
-  margin: 0;
-  border-radius: 2px;
-  border: 1px solid var(--navy-blue-modal);
-} */
-/* .modal input[type="checkbox"]::before {
-  content: "";
-  display: block;
-  width: 16px;
-  height: 16px;
-  border: 1px solid var(--navy-blue-modal);
-  border-radius: 2px;
-
-  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
-} */
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 408px;
+  }
+}
 .modal-close-btn {
   position: absolute;
   top: 24px;
@@ -861,7 +848,6 @@ ul {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   cursor: pointer;
-  /* transition: background-color var(--transition), border var(--transition); */
   transition: var(--transition);
   transition-property: background-color, border, fill;
 }
@@ -956,7 +942,8 @@ ul {
   padding: 11px 38px;
   border: 1px solid var(--navy-blue-modal);
   border-radius: 4px;
-  width: 360px;
+  /* width: 360px; */
+  width: 100%;
   height: 40px;
   font-size: 12px;
   transition: var(--transition);
