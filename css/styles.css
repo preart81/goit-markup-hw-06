@@ -62,9 +62,9 @@ body {
   background-color: var(--white);
 }
 .container {
-  /* width: 1158px; */
   width: auto;
   min-width: 320px;
+  max-width: 1158px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -223,6 +223,7 @@ ul {
   letter-spacing: 0.02em;
   /* font-size: 16px; */
   color: var(--slate);
+  min-width: fit-content;
 }
 @media screen and (min-width: 768px) {
   .section-advantages {
@@ -320,6 +321,7 @@ ul {
   padding: 96px 0;
   background-color: var(--cloud);
   text-align: center;
+  min-width: fit-content;
 }
 .our-team-h2 {
   margin-bottom: 72px;
@@ -399,21 +401,43 @@ ul {
 /*#endregion team ----------------------------------*/
 /*#region customers-------------------------------- */
 .section-customers {
-  padding: 120px 0;
+  --row-items: 2;
+  --itm-width: calc((100% - 16px * (var(--row-items) - 1)) / var(--row-items));
+  padding: 96px 0;
+  min-width: fit-content;
+}
+@media screen and (min-width: 768px) {
+  .section-customers {
+    --row-items: 3;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .section-customers {
+    --row-items: 6;
+  }
 }
 .section-customers h2 {
   margin-bottom: 72px;
 }
 .customer-list {
+  margin: 0 auto;
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
   justify-content: center;
+  column-gap: 16px;
+  row-gap: 72px;
+}
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .customer-list {
+    width: 552px;
+  }
 }
 .customer-item {
+  flex-grow: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 168px;
+  flex-basis: var(--itm-width);
   height: 88px;
   border: 1px solid var(--light-slate);
   border-radius: 4px;
