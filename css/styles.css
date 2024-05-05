@@ -295,9 +295,7 @@ ul {
 }
 .advantages-header {
   margin: 0 0 8px 0;
-  /* font-size: 20px; */
   font-size: 36px;
-  /* font-weight: 500; */
   font-weight: 700;
   line-height: 111%;
   letter-spacing: 0.02em;
@@ -669,8 +667,14 @@ ul {
 }
 .filter {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: start;
   gap: 24px;
+}
+@media screen and (min-width: 768px) {
+  .filter {
+    justify-content: center;
+  }
 }
 .filter button {
   border: 1px solid var(--cornflower);
