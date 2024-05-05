@@ -46,7 +46,7 @@
 }
 .current::after {
   position: relative;
-  bottom: -24px;
+  bottom: -23px;
   content: "";
   display: block;
   height: 4px;
@@ -77,10 +77,6 @@ header .container {
   align-items: center;
   background-color: var(--white);
 }
-header .container ul {
-  display: flex;
-  gap: 40px;
-}
 nav {
   display: flex;
   align-items: center;
@@ -88,19 +84,43 @@ nav {
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
-nav ul {
+nav .logo {
+  margin: 24px 0;
+}
+.nav-list {
   margin-left: 76px;
+  display: flex;
+  gap: 40px;
 }
 .nav-link {
   display: inline-block;
-  padding-top: 24px;
-  padding-bottom: 23px;
+  padding-top: 22px;
+  padding-bottom: 22px;
 }
-address {
+.address {
   font-style: normal;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--slate);
+}
+.address-list {
+  display: flex;
+  flex-direction: column;
+  column-gap: 40px;
+  row-gap: 12px;
+  font-size: 12px;
+}
+@media screen and (max-width: 767px) {
+  .nav-list,
+  .address-list {
+    display: none;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .address-list {
+    flex-direction: row;
+    font-size: unset;
+  }
 }
 h1,
 h2,
@@ -150,6 +170,7 @@ ul {
 /*#endregion Body ---------------------------------*/
 /*#region logo ------------------------------------ */
 .logo {
+  padding: 1.5px 0;
   font-family: var(--second-family);
   font-weight: 800;
   font-size: 18px;
