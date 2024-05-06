@@ -77,6 +77,7 @@ header .container {
   align-items: center;
   background-color: var(--white);
 }
+
 nav {
   display: flex;
   align-items: center;
@@ -123,17 +124,19 @@ nav .logo {
   }
 }
 .menu-toggle {
+  padding: 6px;
+  border-radius: 4px;
   border: none;
   background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
+  stroke: var(--navy-blue);
   transition-timing-function: var(--transition);
-  transition-property: all;
+  transition-property: stroke;
 }
 .menu-toggle:hover,
 .menu-toggle:focus {
-  color: var(--ocean);
   stroke: var(--ocean);
 }
 @media screen and (min-width: 767px) {
@@ -1032,12 +1035,10 @@ ul {
   transform: translateX(0);
 }
 
-.menu-container .menu-toggle {
+.menu-container .menu-close {
   position: absolute;
   top: 24px;
   right: 24px;
-  /* color: #fff; */
-  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1051,8 +1052,8 @@ ul {
   transition: var(--transition);
   transition-property: background-color, border, fill;
 }
-.menu-container .menu-toggle:hover,
-.menu-container .menu-toggle:focus {
+.menu-container .menu-close:hover,
+.menu-container .menu-close:focus {
   background-color: var(--ocean);
   border: transparent;
   fill: var(--white);
@@ -1104,5 +1105,24 @@ ul {
 }
 .mob-menu-social-list li {
   flex-shrink: 0;
+}
+.mob-menu-social-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--iris);
+  transition: background-color var(--transition);
+}
+.mob-menu-social-item:has(> .mob-menu-social-lnk:hover),
+.mob-menu-social-item:has(> .mob-menu-social-lnk:focus) {
+  background-color: var(--ocean);
+}
+.mob-menu-social-lnk {
+  fill: var(--cloud);
+  width: 24px;
+  height: 24px;
 }
 /*#endregion mobile-menu */
