@@ -45,6 +45,11 @@
             </li>
           </ul>
         </address>
+        <button class="menu-toggle js-open-menu" aria-expanded="false">
+          <svg class="menu-toggle-icon" width="32" height="22">
+            <use href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <!--#endregion Header-->
@@ -561,6 +566,82 @@
       </div>
     </footer>
     <!--#endregion Footer-->
+    <!--#region mobile-menu -->
+    <div class="menu-container js-menu-container is-open" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg class="modal-btn-ico" width="8" height="8">
+          <use href="./images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu">
+        <li><a href="index.html" class="link">Studio</a></li>
+        <li><a href="portfolio.html" class="link">Portfolio</a></li>
+        <li><a href="#Contacts" class="link">Contacts</a></li>
+      </ul>
+      <address class="mobile-addres" id="Contacts">
+        <ul class="mobile-address-list">
+          <li>
+            <a class="mobile-phone" href="tel:+110001111111"
+              >+11 (000) 111-11-11</a
+            >
+          </li>
+          <li>
+            <a class="mobile-mail" href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+      </address>
+      <div class="mob-menu-social">
+        <ul class="mob-menu-social-list">
+          <li class="ftr-social-item">
+            <a
+              class="ftr-social-lnk"
+              href="http://www.instagram.com"
+              target="_blank"
+            >
+              <svg class="ftr-social-ico" width="24" height="24">
+                <use href="./images/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="ftr-social-item">
+            <a class="ftr-social-lnk" href="http://twitter.com" target="_blank">
+              <svg class="ftr-social-ico" width="24" height="24">
+                <use href="./images/icons.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="ftr-social-item">
+            <a
+              class="ftr-social-lnk"
+              href="http://facebook.com"
+              target="_blank"
+            >
+              <svg class="ftr-social-ico" width="24" height="24">
+                <use href="./images/icons.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="ftr-social-item">
+            <a
+              class="ftr-social-lnk"
+              href="http://linkedin.com"
+              target="_blank"
+            >
+              <svg class="ftr-social-ico" width="24" height="24">
+                <use href="./images/icons.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--#endregion mobile-menu -->
+    <!--#region script mobile menu -->
+    <script defer src="js/mobile-menu.js"></script>
+    <!--#endregion script mobile menu -->
     <!--#region Script-->
     <div class="backdrop is-hidden" data-modal>
       <!-- <div class="backdrop" data-modal> -->
