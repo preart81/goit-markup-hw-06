@@ -68,9 +68,9 @@ body {
   margin: 0 auto;
   padding: 0 15px;
 }
-@media screen and (min-width: 1128px) {
+@media screen and (min-width: 768px) {
   .container {
-    padding: 0;
+    /* padding: 0; */
   }
 }
 header {
@@ -122,7 +122,7 @@ nav .logo {
     display: none;
   }
 }
-@media screen and (min-width: 1128px) {
+@media screen and (min-width: 1158px) {
   .address-list {
     flex-direction: row;
     font-size: unset;
@@ -240,7 +240,7 @@ ul {
   }
 }
 
-@media screen and (min-width: 1128px) {
+@media screen and (min-width: 1158px) {
   .hero {
     padding: 188px 0;
     background-image: linear-gradient(
@@ -250,7 +250,7 @@ ul {
       url(../images/hero_bg.jpg);
   }
 }
-@media screen and (min-width: 1128px) and (min-resolution: 192dpi) {
+@media screen and (min-width: 1158px) and (min-resolution: 192dpi) {
   .hero {
     padding: 188px 0;
     background-image: linear-gradient(
@@ -315,10 +315,10 @@ ul {
     --items: 2;
   }
 }
-@media screen and (min-width: 1128px) {
+@media screen and (min-width: 1158px) {
   .section-advantages {
     --items: 4;
-    --pad-h: 140px;
+    /* --pad-h: 140px; */
     --pad-v: 120px;
   }
 }
@@ -359,7 +359,7 @@ ul {
     text-align: start;
   }
 }
-@media screen and (min-width: 1128px) {
+@media screen and (min-width: 1158px) {
   .advantages-header {
     margin: 8px 0;
     font-weight: 500;
@@ -373,7 +373,7 @@ ul {
   border-radius: 4px;
   text-align: center;
 }
-@media screen and (max-width: 1127px) {
+@media screen and (max-width: 1157px) {
   .advantages-img {
     display: none;
   }
@@ -389,7 +389,7 @@ ul {
 .what-we-doing {
   padding-bottom: 120px;
 }
-@media screen and (max-width: 1127px) {
+@media screen and (max-width: 1157px) {
   .what-we-doing {
     display: none;
   }
@@ -398,7 +398,7 @@ ul {
   margin-top: 72px;
   display: flex;
   gap: 24px;
-  justify-content: center;
+  justify-content: space-between;
 }
 .what-we-doing ul li img {
   border: 1px solid var(--cornflower);
@@ -411,9 +411,23 @@ ul {
   text-align: center;
   min-width: fit-content;
 }
-@media screen and (min-width: 1128px) {
+@media screen and (min-width: 1158px) {
   .our-team {
     padding: 120px 0;
+  }
+}
+.our-team .container {
+  width: 294px;
+}
+@media screen and (min-width: 768px) {
+  .our-team .container {
+    width: 582px;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .our-team .container {
+    width: auto;
+    /* padding: 0; */
   }
 }
 .our-team-h2 {
@@ -434,30 +448,12 @@ ul {
   letter-spacing: 0.02em;
 }
 .team-list {
-  --row-items: 1;
-  --pad-h: calc(
-    (100% - 264px * var(--row-items) - 24px * (var(--row-items) - 1)) / 2
-  );
-  padding: 0 var(--pad-h);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   column-gap: 24px;
-  /* column-gap: calc(100% / var(--row-items) - 24px * (var(--row-items) - 1) / var(--row-items)); */
   row-gap: 72px;
-  /* flex-direction: row; */
-  /* flex-wrap: nowrap; */
-}
-@media screen and (min-width: 768px) {
-  .team-list {
-    --row-items: 2;
-  }
-}
-@media screen and (min-width: 1128px) {
-  .team-list {
-    --row-items: 4;
-  }
 }
 .our-team-item {
   flex-basis: 264px;
@@ -504,10 +500,16 @@ ul {
     --row-items: 3;
   }
 }
-@media screen and (min-width: 1128px) {
+@media screen and (min-width: 1158px) {
   .section-customers {
     --row-items: 6;
     padding: 120px 0;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+  .section-customers .container {
+    width: 582px;
   }
 }
 .section-customers h2 {
@@ -521,11 +523,11 @@ ul {
   column-gap: 16px;
   row-gap: 72px;
 }
-@media screen and (min-width: 768px) and (max-width: 1127px) {
+/* @media screen and (min-width: 768px) and (max-width: 1157px) {
   .customer-list {
     width: 552px;
   }
-}
+} */
 .customer-item {
   flex-grow: 1;
   display: flex;
@@ -573,7 +575,7 @@ ul {
     width: calc(552px + 15px * 2);
   }
 }
-@media screen and (min-width: 1128px) {
+@media screen and (min-width: 1158px) {
   .footer .container {
     justify-content: space-between;
     width: 100%;
@@ -606,7 +608,7 @@ ul {
     text-align: start;
   }
 }
-@media screen and (min-width: 1128px) {
+@media screen and (min-width: 1158px) {
   .ftr-social {
     margin-left: 41px;
     margin-left: 80px;
@@ -735,7 +737,7 @@ ul {
     padding: 64px 0 96px;
   }
 }
-@media screen and (min-width: 1128px) {
+@media screen and (min-width: 1158px) {
   .section-portfolio {
     --projects-items: 3;
     padding: 100px 0 120px;
